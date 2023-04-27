@@ -5,6 +5,7 @@ import { ButtonWhite } from "../Button/Button.styled";
 const aboutBox = styled.section`
   background-color: var(--accent-color);
   display: flex;
+  min-height: 460px;
 `;
 
 const container = styled(Container)`
@@ -17,7 +18,6 @@ const container = styled(Container)`
 `;
 const aboutImg = styled.img`
   width: 670px;
-  height: 100%;
 `;
 
 const buttonWhiteGreen = styled(ButtonWhite)`

@@ -5,6 +5,7 @@ import { ButtonWhite } from "../Button/Button.styled";
 const blogBox = styled.section`
   background-color: var(--blue-color);
   display: flex;
+  min-height: 460px;
 `;
 
 const container = styled(Container)`
@@ -14,7 +15,6 @@ const container = styled(Container)`
 `;
 const blogImg = styled.img`
   width: 670px;
-  height: 100%;
 `;
 
 const buttonWhiteBlue = styled(ButtonWhite)`
