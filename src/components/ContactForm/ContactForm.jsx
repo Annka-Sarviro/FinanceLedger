@@ -4,6 +4,7 @@ import { Formik, ErrorMessage } from "formik";
 
 import { ButtonColor } from "../Button/Button.styled";
 import s from "./ContactForm.styled";
+// import { useState } from "react";
 
 const FormError = (name) => {
   return (
@@ -19,22 +20,34 @@ const initialValues = {
   email: "",
 };
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 const ContactForm = () => {
   const nameInputId = nanoid();
   const emailInputId = nanoid();
 
-  const handleSubmit = async (values, { resetForm }) => {
-    try {
-      console.log(values);
-    } catch (error) {
-      console.log(resetForm);
-    }
+  const handleSubmit = async (values) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...values }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
   };
 
   return (
     <s.formBox>
-      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-        <s.formContact>
+      <Formik
+        name="contact"
+        initialValues={initialValues}
+        onSubmit={handleSubmit}
+      >
+        <s.formContact name="contact">
           <s.label htmlFor={nameInputId}>
             <s.input
               type="text"
