@@ -6,6 +6,8 @@ const headerBox = styled.header`
 `;
 
 const container = styled(Container)`
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 32px;
   display: flex;
   justify-content: space-between;
@@ -13,7 +15,9 @@ const container = styled(Container)`
   position: fixed;
   top: 0;
   left: 0;
-  height: auto;
+  right: 0;
+  bottom: 0;
+  height: fit-content;
   width: 100%;
 `;
 export default { headerBox, container };

@@ -6,7 +6,7 @@ import heroCoverWebp from "../../assets/home/showcase.webp";
 import heroCoverWebp2x from "../../assets/home/showcase@2x.webp";
 import buttonImg from "../../assets/home/img-button.svg";
 
-const heroBox = styled.div`
+const heroBox = styled.section`
   background: var(--bg-cover), url(${heroCover});
   background-image: var(--bg-cover),
     image-set(url(${heroCover}) 1x, url(${heroCover2x}) 2x);
