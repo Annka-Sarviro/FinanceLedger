@@ -6,4 +6,27 @@ export const ButtonStyled = styled.button`
   border: none;
   border-radius: var(--border-radius);
   cursor: pointer;
+  box-sizing: border-box;
+`;
+
+export const ButtonWhite = styled(ButtonStyled)`
+  background-color: transparent;
+  border: 1px solid var(--white-color);
+  color: inherit;
+  &:hover,
+  &:focus {
+    background-color: var(--white-color);
+    border-color: inherit;
+    color: inherit;
+  }
+`;
+
+export const ButtonColor = styled(ButtonStyled)`
+  background-color: var(--accent-color);
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color-light);
+  }
 `;

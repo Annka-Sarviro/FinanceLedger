@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import logoImg from "../../assets/logo.svg";
+import { Link } from "react-router-dom";
 
-const logoContainer = styled.div`
+const logoContainer = styled(Link)`
   display: flex;
   align-items: center;
 
@@ -9,9 +10,20 @@ const logoContainer = styled.div`
     display: inline-block;
     content: "";
     background-image: url(${logoImg});
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 40px;
     height: 37px;
     margin-right: 4px;
+  }
+
+  &:hover,
+  &:focus {
+    letter-spacing: 2px;
+  }
+
+  &:hover&::before {
+    width: 43px;
   }
 `;
 
