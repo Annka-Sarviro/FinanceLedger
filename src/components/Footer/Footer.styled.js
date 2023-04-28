@@ -11,12 +11,6 @@ const container = styled(Container)`
   padding-bottom: 20px;
 `;
 
-const iconBox = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 const copyrightBox = styled.p`
   margin-top: 10px;
   font-size: 16px;
@@ -27,26 +21,9 @@ const copyrightBox = styled.p`
     line-height: 25px;
   }
 `;
-const iconLink = styled.a`
-  &:not(:last-child) {
-    margin-right: 25px;
-  }
 
-  &:hover > svg {
-    fill: var(--accent-color);
-  }
-`;
-const socialIcon = styled.svg`
-  display: block;
-  height: 35px;
-  fill: white;
-  transition: fill 0.5s ease;
-`;
 export default {
   container,
   footerBox,
-  iconBox,
   copyrightBox,
-  socialIcon,
-  iconLink,
 };

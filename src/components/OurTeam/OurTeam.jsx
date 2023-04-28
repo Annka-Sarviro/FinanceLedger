@@ -10,8 +10,8 @@ const OurTeam = () => {
   return (
     <s.ourTeamBox>
       <s.container>
-        <SectionSubtitleColor>This is what we do</SectionSubtitleColor>
-        <SectionTitleColor>Business Cases</SectionTitleColor>
+        <SectionSubtitleColor>Who we are</SectionSubtitleColor>
+        <SectionTitleColor>Our Professional Team</SectionTitleColor>
         <SectionTextColor>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
           sapiente!

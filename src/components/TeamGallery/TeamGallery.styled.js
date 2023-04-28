@@ -36,14 +36,45 @@ const teamTitleColor = styled(SectionTitleColor)`
 const teamTextColor = styled(SectionTextColor)`
   margin-bottom: 0;
 `;
+const socialLayer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  transition-property: opacity, background-color, position, visibility;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+`;
+
+const thumb = styled.div`
+  margin-bottom: 16px;
+  transition: scale 1s ease;
+  position: relative;
+
+  &:hover {
+    object-fit: cover;
+    scale: 1.1;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  &:hover > div {
+    background-color: #040404;
+    opacity: 0.5;
+    visibility: visible;
+  }
+`;
 
 const teamsImage = styled.img`
   width: 100%;
-  margin-bottom: 16px;
-
-  &:hover {
-    width: 105%;
-  }
+  height: 100%;
 `;
 
 export default {
@@ -52,4 +83,6 @@ export default {
   teamCard,
   teamTitleColor,
   teamTextColor,
+  thumb,
+  socialLayer,
 };
