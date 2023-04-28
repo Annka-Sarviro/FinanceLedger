@@ -11,7 +11,7 @@ import {
 
 const Blog = () => {
   return (
-    <s.blogBox>
+    <s.blogBox id="blog">
       <s.container>
         <SectionSubtitle>April 16 2020</SectionSubtitle>
         <SectionTitle>Blog Post One</SectionTitle>

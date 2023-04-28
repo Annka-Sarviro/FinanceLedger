@@ -8,7 +8,7 @@ import {
 
 const Cases = () => {
   return (
-    <s.casesBox>
+    <s.casesBox id="cases">
       <s.container>
         <SectionSubtitleColor>This is what we do</SectionSubtitleColor>
         <SectionTitleColor>Business Cases</SectionTitleColor>
