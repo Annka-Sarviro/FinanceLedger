@@ -3,7 +3,7 @@ import { ButtonColor } from "../Button/Button.styled";
 
 const Hero = () => {
   return (
-    <s.heroBox>
+    <s.heroBox id="home">
       <s.container>
         <s.title>The Sky Is The Limit</s.title>
         <s.subtitle>We provide world class financial assistance</s.subtitle>

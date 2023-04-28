@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 const NavList = styled.ul`
   display: flex;
@@ -42,8 +42,9 @@ const NavItem = styled.li`
   }
 `;
 
-const NavLinks = styled(NavLink)`
+const NavLinks = styled(Link)`
   color: inherit;
+  cursor: pointer;
   @media (max-width: 767px) {
     font-size: 16px;
     line-height: 22px;

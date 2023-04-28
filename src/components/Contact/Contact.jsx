@@ -7,7 +7,7 @@ import ContactForm from "../ContactForm/ContactForm";
 import { SectionTitleColor } from "../Layout/Layout.styled";
 const Contact = () => {
   return (
-    <s.contactBox>
+    <s.contactBox id="contact">
       <picture>
         <source
           srcSet={`${img_webp_1x} 1x, ${img_webp_2x} 2x`}

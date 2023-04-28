@@ -11,7 +11,7 @@ import {
 
 const About = () => {
   return (
-    <s.aboutBox>
+    <s.aboutBox id="about">
       <picture>
         <source
           srcSet={`${img_webp_1x} 1x, ${img_webp_2x} 2x`}

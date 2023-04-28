@@ -8,7 +8,16 @@ const NavBar = () => {
         {navName.map((el, ind) => {
           return (
             <s.NavItem key={ind}>
-              <s.NavLinks href={el.link}>{el.name}</s.NavLinks>
+              <s.NavLinks
+                activeClass="active"
+                to={el.link}
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                {el.name}
+              </s.NavLinks>
             </s.NavItem>
           );
         })}
