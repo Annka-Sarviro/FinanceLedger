@@ -19,6 +19,12 @@ const galleryBox = styled.div`
 
 const caseImage = styled.img`
   width: 100%;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 export default { galleryBox, caseImage };

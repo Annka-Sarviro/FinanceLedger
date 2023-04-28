@@ -40,6 +40,10 @@ const teamTextColor = styled(SectionTextColor)`
 const teamsImage = styled.img`
   width: 100%;
   margin-bottom: 16px;
+
+  &:hover {
+    width: 105%;
+  }
 `;
 
 export default {
