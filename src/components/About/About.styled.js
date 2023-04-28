@@ -13,19 +13,25 @@ const aboutBox = styled.section`
 
 const container = styled(Container)`
   padding-bottom: 80px;
+  max-height: 562px;
+
   @media (min-width: 768px) {
     width: calc(100% / 2);
+    max-height: 589px;
   }
 
   @media (min-width: 1360px) {
+    max-height: 460px;
   }
 `;
+
 const aboutImg = styled.img`
-  width: auto;
+  width: 100vw;
+  object-fit: cover;
+  height: 100%;
 
   @media (min-width: 768px) {
     width: calc(100vw / 2);
-    object-fit: cover;
   }
 `;
 

@@ -1,5 +1,8 @@
 import s from "./About.styled";
-import img from "../../assets/home/people.jpg";
+import img_1x from "../../assets/home/people.jpg";
+import img_2x from "../../assets/home/people@2x.jpg";
+import img_webp_1x from "../../assets/home/people.webp";
+import img_webp_2x from "../../assets/home/people@2x.webp";
 import {
   SectionTitle,
   SectionSubtitle,
@@ -9,7 +12,20 @@ import {
 const About = () => {
   return (
     <s.aboutBox>
-      <s.aboutImg src={img} width="670" />
+      <picture>
+        <source
+          srcSet={`${img_webp_1x} 1x, ${img_webp_2x} 2x`}
+          type="image/webp"
+          loading="lazy"
+        />
+        <source
+          srcSet={`${img_1x} 1x, ${img_2x} 2x`}
+          type="image/jpeg"
+          loading="lazy"
+        />
+        <s.aboutImg src={img_1x} alt="our command fotoa" width="670" />
+      </picture>
+
       <s.container>
         <SectionSubtitle>What you are looking for</SectionSubtitle>
         <SectionTitle>We provide bespoke solutions</SectionTitle>

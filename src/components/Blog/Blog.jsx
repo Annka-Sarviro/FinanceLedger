@@ -1,5 +1,8 @@
 import s from "./Blog.styled";
-import img from "../../assets/home/blog.jpg";
+import img_1x from "../../assets/home/blog.jpg";
+import img_2x from "../../assets/home/blog@2x.jpg";
+import img_webp_1x from "../../assets/home/blog.webp";
+import img_webp_2x from "../../assets/home/blog@2x.webp";
 import {
   SectionTitle,
   SectionSubtitle,
@@ -20,7 +23,20 @@ const Blog = () => {
         </SectionText>
         <s.buttonWhiteBlue>Read More</s.buttonWhiteBlue>
       </s.container>
-      <s.blogImg src={img} width="670" />
+
+      <picture>
+        <source
+          srcSet={`${img_webp_1x} 1x, ${img_webp_2x} 2x`}
+          type="image/webp"
+          loading="lazy"
+        />
+        <source
+          srcSet={`${img_1x} 1x, ${img_2x} 2x`}
+          type="image/jpeg"
+          loading="lazy"
+        />
+        <s.blogImg src={img_1x} alt="our command fotoa" width="670" />
+      </picture>
     </s.blogBox>
   );
 };
