@@ -7,6 +7,7 @@ export const ButtonStyled = styled.button`
   border-radius: var(--border-radius);
   cursor: pointer;
   box-sizing: border-box;
+  transition: all 1s ease;
 `;
 
 export const ButtonWhite = styled(ButtonStyled)`

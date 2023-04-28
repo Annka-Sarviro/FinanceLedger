@@ -40,6 +40,7 @@ const socialIcon = styled.svg`
   display: block;
   height: 35px;
   fill: white;
+  transition: fill 0.5s ease;
 `;
 export default {
   container,

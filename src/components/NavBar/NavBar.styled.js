@@ -21,17 +21,24 @@ const NavItem = styled.li`
     }
   }
 
-  &:hover&::after {
+  &::after {
     content: "";
+    width: 0;
+    height: 0;
+    transition: width 1s ease;
+  }
+
+  &:hover&::after {
     width: 100%;
     padding: 0 4px;
     height: 2px;
     border-radius: 1px;
-    display: inline-block;
+
     background-color: var(--accent-color);
     position: absolute;
     left: -3px;
     bottom: -2px;
+    transition: width 0.3s ease;
   }
 `;
 

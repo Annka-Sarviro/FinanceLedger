@@ -15,6 +15,7 @@ const logoContainer = styled(Link)`
     width: 39px;
     height: 35px;
     margin-right: 4px;
+    transition: all 0.3s ease;
 
     @media (min-width: 1360px) {
       width: 40px;
