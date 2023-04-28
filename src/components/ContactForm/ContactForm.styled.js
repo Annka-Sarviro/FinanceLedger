@@ -11,9 +11,7 @@ const label = styled.label`
   font-family: inherit;
   display: block;
   width: 100%;
-  &:not(:last-child) {
-    margin-bottom: 26px;
-  }
+  margin-bottom: 16px;
 `;
 
 const input = styled(Field)`

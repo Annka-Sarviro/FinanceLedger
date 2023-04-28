@@ -51,9 +51,7 @@ const Footer = () => {
           </s.iconLink>
         </s.iconBox>
 
-        <s.copyrightBox>
-          <p>Copyright &copy; 2021 - FinanceLedger</p>
-        </s.copyrightBox>
+        <s.copyrightBox>Copyright &copy; 2021 - FinanceLedger</s.copyrightBox>
       </s.container>
     </s.footerBox>
   );

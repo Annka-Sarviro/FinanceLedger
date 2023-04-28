@@ -5,16 +5,40 @@ import { ButtonWhite } from "../Button/Button.styled";
 const blogBox = styled.section`
   background-color: var(--blue-color);
   display: flex;
-  min-height: 460px;
+
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const container = styled(Container)`
-  margin-left: 0;
-  margin-right: 0;
-  max-width: 690px;
+  padding-top: 48px;
+  padding-bottom: 58px;
+
+  @media (min-width: 768px) {
+    padding-top: 59px;
+    padding-bottom: 59px;
+    width: calc(100% / 2);
+  }
+
+  @media (min-width: 1360px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 `;
+
 const blogImg = styled.img`
-  width: 670px;
+  width: auto;
+  object-fit: cover;
+
+  @media (min-width: 768px) {
+    max-height: 493px;
+    width: calc(100vw / 2);
+  }
+
+  @media (min-width: 1360px) {
+    max-height: 452px;
+  }
 `;
 
 const buttonWhiteBlue = styled(ButtonWhite)`

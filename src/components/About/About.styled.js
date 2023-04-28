@@ -5,19 +5,28 @@ import { ButtonWhite } from "../Button/Button.styled";
 const aboutBox = styled.section`
   background-color: var(--accent-color);
   display: flex;
-  min-height: 460px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 `;
 
 const container = styled(Container)`
-  padding-left: 20px;
-  padding-right: 0;
-  width: calc(100vw - 730px);
-  margin-left: 0;
-  margin-right: 0;
-  max-width: 690px;
+  padding-bottom: 80px;
+  @media (min-width: 768px) {
+    width: calc(100% / 2);
+  }
+
+  @media (min-width: 1360px) {
+  }
 `;
 const aboutImg = styled.img`
-  width: 670px;
+  width: auto;
+
+  @media (min-width: 768px) {
+    width: calc(100vw / 2);
+    object-fit: cover;
+  }
 `;
 
 const buttonWhiteGreen = styled(ButtonWhite)`

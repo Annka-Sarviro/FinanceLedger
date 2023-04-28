@@ -19,6 +19,8 @@ const foto1 = {
   _1x_webp: foto1_webp,
   _2x_webp: foto1_webp_2x,
   alt: "foto team person 1",
+  name: " John Doe",
+  position: "President",
 };
 
 const foto2 = {
@@ -27,6 +29,8 @@ const foto2 = {
   _1x_webp: foto2_webp,
   _2x_webp: foto2_webp_2x,
   alt: "foto team person 2",
+  name: "Jane Doe",
+  position: "Vice President",
 };
 
 const foto3 = {
@@ -35,6 +39,8 @@ const foto3 = {
   _1x_webp: foto3_webp,
   _2x_webp: foto3_webp_2x,
   alt: "foto team person 3",
+  name: "Steve Smith",
+  position: "Marketing Head",
 };
 
 export default [foto1, foto2, foto3];

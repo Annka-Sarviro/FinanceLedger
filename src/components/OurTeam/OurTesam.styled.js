@@ -6,7 +6,18 @@ const ourTeamBox = styled.section`
 `;
 
 const container = styled(Container)`
-  padding-bottom: 80px;
+  padding-top: 72px;
+  padding-bottom: 50px;
+
+  @media (min-width: 768px) {
+    padding-top: 50px;
+    padding-bottom: 42px;
+  }
+
+  @media (min-width: 1360px) {
+    padding-top: 80px;
+    padding-bottom: 88px;
+  }
 `;
 
 export default { container, ourTeamBox };

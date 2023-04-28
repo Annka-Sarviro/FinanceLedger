@@ -17,8 +17,15 @@ const iconBox = styled.div`
   align-items: center;
 `;
 
-const copyrightBox = styled.div`
+const copyrightBox = styled.p`
   margin-top: 10px;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 25px;
+  }
 `;
 const iconLink = styled.a`
   &:not(:last-child) {

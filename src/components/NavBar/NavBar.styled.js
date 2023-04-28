@@ -10,7 +10,15 @@ const NavItem = styled.li`
   position: relative;
 
   &:not(:first-child) {
-    margin-left: 40px;
+    margin-left: 12px;
+
+    @media (min-width: 768px) {
+      margin-left: 20px;
+    }
+
+    @media (min-width: 1360px) {
+      margin-left: 40px;
+    }
   }
 
   &:hover&::after {
@@ -20,7 +28,7 @@ const NavItem = styled.li`
     height: 2px;
     border-radius: 1px;
     display: inline-block;
-    background-color: var(--white-color);
+    background-color: var(--accent-color);
     position: absolute;
     left: -3px;
     bottom: -2px;
@@ -29,5 +37,9 @@ const NavItem = styled.li`
 
 const NavLinks = styled(NavLink)`
   color: inherit;
+  @media (max-width: 767px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
 `;
 export default { NavList, NavItem, NavLinks };
