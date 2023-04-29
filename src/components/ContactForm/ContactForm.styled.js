@@ -10,13 +10,9 @@ const placeholder = styled.p`
   position: absolute;
   top: 16px;
   left: 8px;
-  color: #808080;
+  color: var(--gray-color);
   transition: 0.2s ease all;
   pointer-events: none;
-  @media screen and (min-width: 768px) {
-  }
-  @media screen and (min-width: 1360px) {
-  }
 `;
 
 const formContact = styled(Form)``;
@@ -26,7 +22,6 @@ const input = styled(Field)`
   border: none;
   border-radius: var(--border-radius);
   background-color: var(--white-color);
-
   height: 57px;
 
   & :focus-within ~ ${placeholder}, :not(:placeholder-shown) ~ ${placeholder} {
