@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 // import * as Yup from "yup";
-import { Formik, ErrorMessage } from "formik";
+import { Formik } from "formik";
 // import { useFormik } from "formik";
 import validationSchema from "../../schemas/contactFormschema";
 
@@ -28,7 +28,7 @@ const initialValues = {
   email: "",
 };
 
-consat ContactForm = () => {
+const ContactForm = () => {
   const nameInputId = nanoid();
   const emailInputId = nanoid();
 
@@ -59,10 +59,13 @@ consat ContactForm = () => {
               <s.input
                 type="text"
                 name="name"
+                placeholder="Enter your name"
                 title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
               />
-              {touched.name && errors.name && <div>{errors.name}</div>}
-              <span>Enter your name</span>{" "}
+              <s.placeholder>Enter your name</s.placeholder>
+              {touched.name && errors.name && (
+                <s.errorMessge>{errors.name}</s.errorMessge>
+              )}
             </s.label>
 
             <s.label htmlFor={emailInputId}>
@@ -71,9 +74,12 @@ consat ContactForm = () => {
                 name="email"
                 id={emailInputId}
                 title="Email"
+                placeholder="Enter email*"
               />
-              <span>Enter email*</span>
-              {touched.email && errors.email && <div>{errors.email}</div>}
+              <s.placeholder>Enter email*</s.placeholder>
+              {touched.email && errors.email && (
+                <s.errorMessge>{errors.email}</s.errorMessge>
+              )}
             </s.label>
 
             <ButtonColor variant="contained" type="submit">
