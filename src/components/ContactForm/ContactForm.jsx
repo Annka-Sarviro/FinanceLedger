@@ -14,21 +14,21 @@ const encode = (data) => {
     .join("&");
 };
 
-const FormError = (name) => {
-  return (
-    <ErrorMessage
-      name={name}
-      render={() => <p>Enter valid number or name</p>}
-    />
-  );
-};
+// const FormError = (name) => {
+//   return (
+//     <ErrorMessage
+//       name={name}
+//       render={() => <p>Enter valid number or name</p>}
+//     />
+//   );
+// };
 
 const initialValues = {
   name: "",
   email: "",
 };
 
-const ContactForm = () => {
+consat ContactForm = () => {
   const nameInputId = nanoid();
   const emailInputId = nanoid();
 
