@@ -1,5 +1,5 @@
 import s from "./CaseGallery.styled";
-import galleryfotolinks from "./galleryfotolinks";
+import galleryfotolinks from "../../services/galleryfotolinks";
 import LightBox from "../LightBox/LightBox";
 import { useEffect, useState } from "react";
 

@@ -1,5 +1,5 @@
 import s from "./NavBar.styled";
-import navName from "./navName";
+import navName from "../../services/navName";
 import { useState, useEffect } from "react";
 
 const NavBar = () => {
@@ -9,13 +9,12 @@ const NavBar = () => {
   useEffect(() => {
     const handleScroll = () => {
       let isTop = isMobile ? 115 : 80;
-      console.log(isTop);
       setTranslate(isTop);
     };
 
     setIsMobile(window.innerWidth <= 768);
-
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

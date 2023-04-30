@@ -1,27 +1,16 @@
 import { nanoid } from "nanoid";
-// import * as Yup from "yup";
 import { Formik } from "formik";
-// import { useFormik } from "formik";
 import validationSchema from "../../schemas/contactFormschema";
-
 import { ButtonColor } from "../Button/Button.styled";
 import s from "./ContactForm.styled";
-// import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const encode = (data) => {
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
 };
-
-// const FormError = (name) => {
-//   return (
-//     <ErrorMessage
-//       name={name}
-//       render={() => <p>Enter valid number or name</p>}
-//     />
-//   );
-// };
 
 const initialValues = {
   name: "",
@@ -39,7 +28,12 @@ const ContactForm = () => {
       body: encode({ "form-name": "contact", ...values }),
     })
       .then(() => resetForm())
-      .then(() => alert("Thank You! Your form submission has been received"))
+      .then(() =>
+        toast.success("Thank You! Your form submission has been received", {
+          position: toast.POSITION.TOP_CENTER,
+          onClose: () => window.scrollTo(0, 0),
+        })
+      )
       .catch((error) => alert(error));
   };
 
@@ -67,7 +61,6 @@ const ContactForm = () => {
                 <s.errorMessge>{errors.name}</s.errorMessge>
               )}
             </s.label>
-
             <s.label htmlFor={emailInputId}>
               <s.input
                 type="email"
@@ -81,10 +74,10 @@ const ContactForm = () => {
                 <s.errorMessge>{errors.email}</s.errorMessge>
               )}
             </s.label>
-
             <ButtonColor variant="contained" type="submit">
               Send
             </ButtonColor>
+            <ToastContainer />
           </s.formContact>
         )}
       </Formik>

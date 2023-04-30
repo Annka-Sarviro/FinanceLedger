@@ -38,4 +38,5 @@ const container = styled(Container)`
     padding-bottom: 32px;
   }
 `;
+
 export default { headerBox, container };

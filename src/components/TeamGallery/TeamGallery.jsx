@@ -1,6 +1,6 @@
 import s from "./TeamGallery.styled";
 import SocialIconBox from "../socialIconBox/socialIconBox";
-import teamsGalletyFotoLinks from "./teamsGalletyFotoLinks";
+import teamsGalletyFotoLinks from "../../services/teamsGalletyFotoLinks";
 
 const TeamGallery = () => {
   return (

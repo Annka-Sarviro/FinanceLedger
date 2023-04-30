@@ -42,7 +42,7 @@ const label = styled.label`
   font-family: inherit;
   display: block;
   width: 100%;
-  margin-bottom: 24px;
+  margin-bottom: 52px;
   position: relative;
 `;
 
