@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const logoContainer = styled(Link)`
   display: flex;
   align-items: center;
+  opacity: 1;
 
   &::before {
     display: inline-block;
