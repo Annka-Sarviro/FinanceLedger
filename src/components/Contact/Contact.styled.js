@@ -22,7 +22,7 @@ const container = styled(Container)`
     width: calc(100% / 2);
     padding-top: 32px;
     padding-bottom: 32px;
-    max-height: 354px;
+    max-height: 442px;
   }
 
   @media (min-width: 1360px) {
